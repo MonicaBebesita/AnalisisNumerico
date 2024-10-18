@@ -177,6 +177,43 @@ namespace regresion{
 		}
 	};
 	
+	struct modelo_exponencial {
+		double c;        /*!< Coeficiente exponencial */
+		double a;        /*!< Exponente de la función exponencial */
+		bool valido;     /*!< Si el modelo es válido o no */
+		modelo_lineal lineal; /*!< Usamos la regresión lineal transformada */
+		
+		modelo_exponencial(vector<double> x, vector<double> y): lineal(x, ln(y)) {
+			valido = lineal.valido;
+			if (valido) {
+				c = exp(lineal.b0); // b0 = ln(c), por lo que c = e^b0
+				a = lineal.b1;      // b1 es el parámetro 'a'
+			}
+		}
+		
+		friend ostream& operator <<(ostream & os, const modelo_exponencial &m) {
+			if (!m.valido) {
+				os << "El modelo no es válido" << endl;
+			} else {
+				os << "Función exponencial: y = " << m.c << " * e^(" << m.a << " * x)" << endl;
+				os << "r2 = " << m.lineal.r2 << endl;
+				os << "Desv. estándar: " << m.lineal.sy << endl;
+				os << "Error estándar de aproximación: " << m.lineal.syx << endl;
+			}
+			return os;
+		}
+		
+		double estimar(double x_est) {
+			if (!valido) {
+				return NAN;
+			}
+			return c * exp(a * x_est);
+		}
+	};
+	
+	
+	
+	
 	class lineal_potencia{
 		public:
 			lineal_potencia(vector <double> x,vector <double> y):modelo(x,y){
@@ -194,5 +231,26 @@ namespace regresion{
 		private: 
 			modelo_potencia modelo;
 	};
+	
+	class lineal_exponencial {
+	public:
+		lineal_exponencial(vector<double> x, vector<double> y): modelo(x, y) {
+		}
+		
+		double estimar(double x) {
+			if (!modelo.valido) {
+				return NAN;
+			}
+			return modelo.estimar(x);
+		}
+		
+		modelo_exponencial obtenerModelo() {
+			return modelo;
+		}
+		
+	private:
+			modelo_exponencial modelo;
+	};
+	
 }
 #endif

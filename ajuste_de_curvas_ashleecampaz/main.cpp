@@ -10,7 +10,12 @@ void prueba_gauss();
 int main (int argc, char *argv[]) {
 	
 	caso_1_regresion();
-	//caso_1_funcion_potencia();
+	cout<<"----------------------------------------------------------------------"<<endl;
+	caso_1_modelo_exponencial();
+	cout<<"----------------------------------------------------------------------"<<endl;
+	caso_1_funcion_potencia();
+	cout<<"----------------------------------------------------------------------"<<endl;
+	caso_1_regresion_cuadratica();
 	//prueba_gauss();
 	//caso_1_regresion_cuadratica();
 	//caso_1_interpolacion_newton();

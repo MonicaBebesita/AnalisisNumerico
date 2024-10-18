@@ -5,6 +5,7 @@
 void caso_1_regresion();
 
 void caso_1_funcion_potencia();
+void caso_1_modelo_exponencial();
 
 void caso_1_regresion_cuadratica(); 
 
