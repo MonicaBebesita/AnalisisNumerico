@@ -92,6 +92,11 @@ namespace regresion{
 			os<< "Error estandar de aproximacion:"
 			<<m.syx
 			<<endl;
+			if(m.syx<m.sy){
+			os<<"syx<sy"<<endl;
+			
+				
+			}
 			return os; 
 		}
 	};
