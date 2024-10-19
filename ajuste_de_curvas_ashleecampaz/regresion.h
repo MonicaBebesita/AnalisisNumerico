@@ -92,6 +92,8 @@ namespace regresion{
 			os<< "Error estandar de aproximacion:"
 			<<m.syx
 			<<endl;
+			os << "Suma total de cuadrados (st): " << m.st << endl;
+			
 			if(m.syx<m.sy){
 			os<<"syx<sy"<<endl;
 			
@@ -149,6 +151,17 @@ namespace regresion{
 			valido = lineal.valido;
 			c = pow(10.0f,lineal.b0);
 			a = lineal.b1;
+			// Recalcular ST usando los valores originales de y
+			double y_prom = 0.0;
+			for (double val : y) {
+				y_prom += val;
+			}
+			y_prom /= y.size();
+			
+			lineal.st = 0.0;
+			for (size_t i = 0; i < y.size(); i++) {
+				lineal.st += pow(y[i] - y_prom, 2); // Usar y original
+			}
 			
 		}
 		
@@ -169,6 +182,7 @@ namespace regresion{
 			os<< "Error estandar de aproximacion:"
 				<<m.lineal.syx
 				<<endl;
+			os << "Suma total de cuadrados (st): " << m.lineal.st << endl;
 			return os;
 		}
 		
@@ -189,16 +203,28 @@ namespace regresion{
 				c = exp(lineal.b0); // b0 = ln(c), por lo que c = e^b0
 				a = lineal.b1;      // b1 es el parámetro 'a'
 			}
+			// Recalcular ST usando los valores originales de y
+			double y_prom = 0.0;
+			for (double val : y) {
+				y_prom += val;
+			}
+			y_prom /= y.size();
+			
+			lineal.st = 0.0;
+			for (size_t i = 0; i < y.size(); i++) {
+				lineal.st += pow(y[i] - y_prom, 2); // Usar y original
+			}
 		}
 		
 		friend ostream& operator <<(ostream & os, const modelo_exponencial &m) {
 			if (!m.valido) {
 				os << "El modelo no es válido" << endl;
 			} else {
-				os << "Función exponencial: y = " << m.c << " * e^(" << m.a << " * x)" << endl;
+				os << "Funcion exponencial: y = " << m.c << " * e^(" << m.a << " * x)" << endl;
 				os << "r2 = " << m.lineal.r2 << endl;
-				os << "Desv. estándar: " << m.lineal.sy << endl;
-				os << "Error estándar de aproximación: " << m.lineal.syx << endl;
+				os << "Desv. estandar: " << m.lineal.sy << endl;
+				os << "Error estandar de aproximación: " << m.lineal.syx << endl;
+				os << "Suma total de cuadrados (st): " << m.lineal.st << endl;
 			}
 			return os;
 		}

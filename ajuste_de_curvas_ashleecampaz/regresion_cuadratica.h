@@ -99,6 +99,7 @@ namespace regresion{
 			os<< "Error estandar de aproximacion:"
 				<<m.syx
 				<<endl;
+			os << "Suma total de cuadrados (st): " << m.st << endl;
 			return os; 
 		}	
 	};

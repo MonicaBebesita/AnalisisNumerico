@@ -26,10 +26,10 @@ using regresion::cuadratica;
 void caso_1_regresion(){
 	cout << "Caso de 1 regresion lineal"<< endl;
 	
-	vector<double> x {10.0f,20.0f,30.0f,40.0f,50.0f,60.0f,70.0f,80.0f};
-	vector<double> y {1.06f,1.33f,1.52f,1.68f,1.81f,1.91f,2.01f,2.11f};
+	vector<double> x {0.0f,		200.0f,	350.0f,	550.0f,	800.0f,	1000.0f,	1250.0f,	1500.0f,	1700.0f	};
+	vector<double> y {12.90f,	13.0f,	13.10f,	13.30f,	13.90f,	14.20f,		14.30f,		14.60f,		14.80f	};
 	
-	double xi = 35.0f;
+	double xi = 500.0f;
 	double y_estimado;
 	lineal_simple r(x,y); 
 	
@@ -38,16 +38,18 @@ void caso_1_regresion(){
 	modelo_lineal modelo = r.obtenerModelo();
 	
 	cout<<modelo;
-	cout<<"El valor estimado para x"<<xi
-		<<"es y="<<y_estimado<<endl;
+	cout<<"El valor estimado para x="<<xi
+		<<" es y="<<y_estimado<<endl;
 }
 
 	void caso_1_funcion_potencia(){
+		/**Remplazamos el 0 por 10^-10 para que no cause problemas con los logaritmos*/
 		cout<<"Caso 1 regresion modelo potencial."<<endl;
-		vector<double> x {10.0f,20.0f,30.0f,40.0f,50.0f,60.0f,70.0f,80.0f};
-		vector<double> y {1.06f,1.33f,1.52f,1.68f,1.81f,1.91f,2.01f,2.11f};
+		vector<double> x {0.0000000001f,		200.0f,	350.0f,	550.0f,	800.0f,	1000.0f,	1250.0f,	1500.0f,	1700.0f	};
+		vector<double> y {12.90f,	13.0f,	13.10f,	13.30f,	13.90f,	14.20f,		14.30f,		14.60f,		14.80f	};
+		
 		vector<double> xlog10 = logD(x);
-		double xi = 35.0f;
+		double xi = 500.0f;
 		double y_estimado;
 		lineal_potencia r(x,y); 
 		
@@ -64,10 +66,11 @@ void caso_1_regresion(){
 		
 		void caso_1_modelo_exponencial(){
 			cout<<"Caso 1 regresion modelo exponencial."<<endl;
-			vector<double> x {10.0f,20.0f,30.0f,40.0f,50.0f,60.0f,70.0f,80.0f};
-			vector<double> y {1.06f,1.33f,1.52f,1.68f,1.81f,1.91f,2.01f,2.11f};
+			vector<double> x {0.0f,		200.0f,	350.0f,	550.0f,	800.0f,	1000.0f,	1250.0f,	1500.0f,	1700.0f	};
+			vector<double> y {12.90f,	13.0f,	13.10f,	13.30f,	13.90f,	14.20f,		14.30f,		14.60f,		14.80f	};
 			
-			double xi = 35.0f;
+			
+			double xi = 500.0f;
 			double y_estimado;
 			lineal_exponencial r(x,y); 
 			
@@ -83,11 +86,12 @@ void caso_1_regresion(){
 		
 		
 	void caso_1_regresion_cuadratica(){
-		cout<<"Caso 1 linealizacion funcion ."<<endl;
-		vector<double> x {10.0f,20.0f,30.0f,40.0f,50.0f,60.0f,70.0f,80.0f};
-		vector<double> y {1.06f,1.33f,1.52f,1.68f,1.81f,1.91f,2.01f,2.11f};
+		cout<<"Caso 1 regresion_cuadratica ."<<endl;
+		vector<double> x {0.0f,		200.0f,	350.0f,	550.0f,	800.0f,	1000.0f,	1250.0f,	1500.0f,	1700.0f	};
+		vector<double> y {12.90f,	13.0f,	13.10f,	13.30f,	13.90f,	14.20f,		14.30f,		14.60f,		14.80f	};
+		
 		vector<double> xlog10 = logD(x);
-		double xi = 35.0f;
+		double xi = 500.0f;
 		double y_estimado;
 		cuadratica c(x,y); 
 
