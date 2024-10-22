@@ -184,7 +184,7 @@ namespace interpolacion{
 		* @param indice_lim_sup indice en x del limite superior de int_x
 		* @param numeros_arriba_lim_sup	numero de datos mayores que el limite superior de int_x 
 		*/
-		 void construir_intervalos_de_error(int int_x,int indice_lim_inf, int indice_lim_sup, int numeros_arriba_lim_sup ){
+		 void construir_intervalos_de_error(double int_x,int indice_lim_inf, int indice_lim_sup, int numeros_arriba_lim_sup ){
 			
 			vector<double> intervalo_x_error = intervalo_x;
 			vector<double> intervalo_y_error = intervalo_y; 
