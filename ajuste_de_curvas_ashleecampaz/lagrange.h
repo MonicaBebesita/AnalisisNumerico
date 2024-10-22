@@ -1,11 +1,19 @@
 #ifndef LAGRANGE_H
 #define LAGRANGE_H
 
-//metodo de interpolacion
+/**
+* @file 
+* @brief contiene la clase lagrange y sus rutinas
+*/
 namespace interpolacion{
 	
 	class lagrange{
 	public:
+		/**
+		* @brief constructor de clase lagrange
+		* @param x arreglo datos de la variable independiente
+		* @param y arreglo de datos de la varibale dependiente
+		*/
 		lagrange(vector<double>x, vector<double> y){
 			if(x.size()==0 || x.size()!=y.size()){
 				valido = false;
@@ -20,29 +28,52 @@ namespace interpolacion{
 		bool es_valido(){
 			return valido; 
 		}
-			
+		/**
+		* @brief realiza una interpolacion con un polinomio de grado n-1 (esa n el tamaño de x)
+		* @param x_int valor al cual se le halla la estimacion
+		* @return devuelve el valor estimado de int_x
+		*/	
 		double interpolar(double x_int){
 			if(!valido){
 				return NAN; 
 			}
 			return evaluar(x_int); 
 		}
-		
+		/**
+		* @brief realiza una interpolacion con un polinomio de grado dado
+		* @param x_int valor al cual se le halla la estimacion
+		* @param grado grado del polinomio de lagrange
+		* @return devuelve el valor estimado de int_x
+		*/
 		double interpolar(double x_int, int grado){
 			if(!valido){
 				return NAN; 
 			}
 			return evaluar(x_int,grado); 
 		}	
+		/**
+		* @brief obtiene intervalo con que se realizo la interpolacion de grado dado
+		* @return devuelve el intervalo de x con el que se realizo la interpolacion
+		*/	
 		vector<double> getIntervalo(){
 			return intervalo_x; 
 		}
+		/**
+		* @brief obtiene el error absoluto de una la interpolacion de grado dado
+		* @return devuelve el error absoluto
+		*/		
 		double getError(){
 			return r2; 
 		}	
-	private: 	
+	private: 
+		/**
+		* @brief encuentra el intervalo de menor tamaño para realizar la interpolacion
+		* @param int_x valor a estimar
+		* @param grado grado el polinomio de que se desea contruir
+		*/		
 		void hallar_intevalo(double int_x, int grado){
-			int num_datos = grado +1; 
+			
+			int num_datos = grado +1; /*!<Numero de datos del intervalo*/
 			intervalo_x.resize(num_datos);
 			intervalo_y.resize(num_datos);
 			int contador = 0; 
@@ -143,7 +174,18 @@ namespace interpolacion{
 				}
 				indice_lim_sup=i-1;
 			}
-			//obtiene los intervalos para calcular el error 
+			construir_intervalos_de_error(int_x,indice_lim_inf,indice_lim_sup, numeros_arriba_lim_sup);
+			
+		}
+		/**
+		* @brief establece los intervalos para calcular el error absoluto de una estimacion de grado dado 
+		* @param int_x valor que se desea estimar
+		* @param indice_lim_inf indice en x del limite inferior de int_x
+		* @param indice_lim_sup indice en x del limite superior de int_x
+		* @param numeros_arriba_lim_sup	numero de datos mayores que el limite superior de int_x 
+		*/
+		 void construir_intervalos_de_error(int int_x,int indice_lim_inf, int indice_lim_sup, int numeros_arriba_lim_sup ){
+			
 			vector<double> intervalo_x_error = intervalo_x;
 			vector<double> intervalo_y_error = intervalo_y; 
 			intervalo_x_error.resize(intervalo_x.size()+1);
@@ -153,6 +195,7 @@ namespace interpolacion{
 				intervalo_y_error[intervalo_x_error.size()-1] = y[indice_lim_sup+1];
 			}
 			else{
+				//en caso de no haber datos mayor a lim_sup, se toma el lado a la izquierda de lim_inf
 				for(int i=1; i<=intervalo_x_error.size();i++){
 					intervalo_x_error[i]= intervalo_x_error[i-1];
 					intervalo_y_error[i]= intervalo_y_error[i-1];
@@ -163,7 +206,12 @@ namespace interpolacion{
 			newton n(intervalo_x_error,intervalo_y_error); 
 			calcular_error(int_x,n);
 		}
-		
+			
+		/**
+		* @brief calcula el error absoluto de una estimacion utilizando newton
+		* @param int_x valor que se desea estimar
+		* @param n objeto de newton
+		*/
 		void calcular_error(double int_x,newton n){
 			
 			r2 = n.obtenerUltimoCoeficiente();
@@ -172,9 +220,14 @@ namespace interpolacion{
 			}
 			
 		}	
+		/**
+		* @brief halla el mayor numero menor a int_x en el arreglo x 
+		* @param int_x valor al se que halla el limite inferior
+		* @return devuelve el indice de x en donde se encuentra el limite inferior
+		*/
 			
 		int hallar_limiteInferior(double int_x){
-			//devuelve el indice de x en donde se encuentra el limite inferior
+			//
 			int i=1; 
 			double limite_inf = x[0];
 			while(x[i]<int_x && x[i]>limite_inf){
@@ -183,6 +236,11 @@ namespace interpolacion{
 			}
 			return i-1; 
 		}
+		/**
+		* @brief halla el menor numero mayor a int_x en el arreglo x 
+		* @param int_x valor al se que halla el limite superior
+		* @return devuelve el indice de x en donde se encuentra el limite superior
+		*/	
 		int hallar_limiteSuperior(double int_x){
 			//devuelve el indice de x en donde se encuentra el limite superior
 			int i=x.size()-2; 
@@ -193,7 +251,12 @@ namespace interpolacion{
 			}
 			return i+1; 
 		}
-			
+		/**
+		* @brief construye el polinomio de Lagrange grado de n-1 (sea n el grado del arreglo x) 
+			y  evalua int_x en el polinomio 
+		* @param int_x valor al se que halla la estimacion
+		* @return devuelve el valor estimado de int_x
+		*/		
 		double evaluar(double int_x){
 			double suma = 0; 
 			double n = x.size(); 
@@ -212,7 +275,12 @@ namespace interpolacion{
 			
 			return suma; 
 		}
-		
+		/**
+		* @brief construye el polinomio de Lagrange evalua y int_x en el polinomio 
+		* @param int_x valor al cual se le halla la estrimacion
+		* @param grado grado del polinomio de lagrange
+		* @return devuelve el valor estimado de int_x
+		*/
 		double evaluar(double int_x, int grado){
 			double suma = 0; 
 			if(grado>x.size() -1){
@@ -238,14 +306,13 @@ namespace interpolacion{
 			return suma; 
 		}
 				
-		vector<double> x;
-		vector<double> y;
-		vector<double> intervalo_x;
-		vector<double> intervalo_y;
-		double r2; 
-		bool valido = false;
+		vector<double> x;/*!<Datos de la varible independiente*/
+		vector<double> y;/*!<Datos de la varible dependiente*/
+		vector<double> intervalo_x; /*!<Datos de la varible independiente para un polinomio de grado dado*/
+		vector<double> intervalo_y;/*!<Datos de la varible dependiente para un polinomio de grado dado*/
+		double r2;/*!<Error absoluto de una estimacion con grado dado*/ 
+		bool valido = false;/*!<Define si el modelo es valido*/ 
 	};
-	
 	
 }
 

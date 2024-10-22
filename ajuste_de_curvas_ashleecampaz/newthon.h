@@ -6,6 +6,10 @@
 #include <cmath>
 using std::vector; 
 
+/**
+* @file 
+* @brief contiene la clase newton y sus rutinas
+*/
 namespace interpolacion{
 	
 	class newton{

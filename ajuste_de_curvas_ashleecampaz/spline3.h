@@ -10,6 +10,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+/**
+* @file 
+* @brief contiene la clase spline3 y sus rutinas
+*/
 namespace interpolacion {
 	class spline3 {
 	public:

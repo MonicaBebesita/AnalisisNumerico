@@ -9,6 +9,10 @@ using std::cout;
 using std::cin;
 using std::vector;
 
+/**
+* @file 
+* @brief contiene a la estructura modelo_lineal, la clase lineal_simple y sus respectivas rutinas
+*/
 namespace regresion{
 	
 	struct modelo_lineal{

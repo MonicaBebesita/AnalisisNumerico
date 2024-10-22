@@ -1,7 +1,10 @@
 #ifndef CASO_H
 #define CASO_H
 
-
+/**
+* @file 
+* @brief contiene la definicion de las rutinas de los casos
+*/
 void caso_1_regresion();
 
 void caso_1_funcion_potencia();

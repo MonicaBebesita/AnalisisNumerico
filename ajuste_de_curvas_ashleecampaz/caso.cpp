@@ -25,6 +25,10 @@ using regresion::modelo_cuadratico;
 using regresion::modelo_exponencial;
 using regresion::cuadratica;
 
+/**
+* @file 
+* @brief contiene la implementacion de las rutinas de los casos
+*/
 void caso_1_regresion(){
 	cout << "Caso de 1 regresion lineal"<< endl;
 	
