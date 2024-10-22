@@ -23,4 +23,5 @@ void caso_1_interpolacion_inversa();
 void caso_4_interpolacion_lagrange_g2();
 
 void caso_4_interpolacion_lagrange_g3();
+void trazador_cubico();
 #endif
