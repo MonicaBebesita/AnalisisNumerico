@@ -92,19 +92,21 @@ namespace interpolacion{
 					j = indice_lim_sup + num_dato2 + num_dato1 -1;
 				}
 				
+				//toma los datos por debajo de int_x
 				while (i<= indice_lim_inf){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
 					contador++; 
 				}
-				i=indice_lim_sup;
+				//toma los datos por encima de int_x
 				while (i<=j && i<x.size()){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
 					contador++; 
 				}
+				indice_lim_sup=i-1;
 			}
 			else{
 				//numero de datos es par
@@ -139,6 +141,7 @@ namespace interpolacion{
 					i++;
 					contador++; 
 				}
+				indice_lim_sup=i-1;
 			}
 			//obtiene los intervalos para calcular el error 
 			vector<double> intervalo_x_error = intervalo_x;
@@ -146,8 +149,8 @@ namespace interpolacion{
 			intervalo_x_error.resize(intervalo_x.size()+1);
 			intervalo_y_error.resize(intervalo_x.size()+1); 
 			if(numeros_arriba_lim_sup>0){
-				intervalo_x_error[intervalo_x.size()-1] = x[indice_lim_sup+1];
-				intervalo_y_error[intervalo_x.size()-1] = y[indice_lim_sup+1];
+				intervalo_x_error[intervalo_x_error.size()-1] = x[indice_lim_sup+1];
+				intervalo_y_error[intervalo_x_error.size()-1] = y[indice_lim_sup+1];
 			}
 			else{
 				for(int i=1; i<=intervalo_x_error.size();i++){
@@ -161,7 +164,7 @@ namespace interpolacion{
 			calcular_error(int_x,n);
 		}
 		
-		void calcular_error(int int_x,newton n){
+		void calcular_error(double int_x,newton n){
 			
 			r2 = n.obtenerUltimoCoeficiente();
 			for(int i=0; i<intervalo_x.size();i++){

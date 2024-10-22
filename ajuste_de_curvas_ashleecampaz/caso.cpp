@@ -213,3 +213,82 @@ void caso_1_regresion(){
 			cout<< intv.getPolinomio()<<endl;
 		}
 	}
+		
+	void caso_4_interpolacion_lagrange_g2(){
+		cout<<"\nInterpolacion de lagrange con grado 2\n"<<endl;
+		vector<double>  x = {5.0f,5.25f,5.50f,5.75f,6.0f,6.25f,6.50f,6.75f};
+		vector<double> y = {143.9264189f,165.3421693f,174.3447736f,161.4457388f,114.5160168f,19.0198411f,-141.2134580f,-382.4545422f};
+		
+		lagrange l(x,y);
+		
+		double int_x = 5.17f;
+		double int_x2 = 6.32f;
+		int grado = 2; 
+		double y_est;
+		double y_est2;
+		
+		if(!l.es_valido()){
+			cout<<"El polinomio no es valido."<<endl;
+		}
+		else{
+			y_est = l.interpolar(int_x,grado);
+			cout<<"Empleado un polinomio de grado "<<grado
+				<<"\npara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl;
+			cout<<"Utilizando el intervalo:[";
+			for(auto x:l.getIntervalo()){
+				cout<<x<<" ";
+			}
+			cout<<"]"<<endl;
+			cout<<"r2 = "<<l.getError()<<endl;
+			
+			y_est2 = l.interpolar(int_x2,grado);
+			cout<<"\nEmpleado un polinomio de grado "<<grado
+				<<"\npara x = "<<int_x2 <<" la interpolacion es  y="<<y_est2<<endl;
+			cout<<"Utilizando el intervalo:[";
+			for(auto x:l.getIntervalo()){
+				cout<<x<<" ";
+			}
+			cout<<"]"<<endl;
+			cout<<"r2 = "<<l.getError()<<endl;
+		}
+		
+	}	
+	void caso_4_interpolacion_lagrange_g3(){
+		cout<<"\nInterpolacion de lagrange con grado 3\n"<<endl;
+		vector<double>  x = {5.0f,5.25f,5.50f,5.75f,6.0f,6.25f,6.50f,6.75f};
+		vector<double> y = {143.9264189f,165.3421693f,174.3447736f,161.4457388f,114.5160168f,19.0198411f,-141.2134580f,-382.4545422f};
+		
+		lagrange l(x,y);
+		
+		double int_x = 5.17f;
+		double int_x2 = 6.32f;
+		int grado = 3; 
+		double y_est;
+		double y_est2;
+		
+		if(!l.es_valido()){
+			cout<<"El polinomio no es valido."<<endl;
+		}
+		else{
+			y_est = l.interpolar(int_x,grado);
+			cout<<"Empleado un polinomio de grado "<<grado
+				<<"\npara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl;
+			cout<<"Utilizando el intervalo:[";
+			for(auto x:l.getIntervalo()){
+				cout<<x<<" ";
+			}
+			cout<<"]"<<endl;
+			cout<<"r2 = "<<l.getError()<<endl;
+			
+			y_est2 = l.interpolar(int_x2,grado);
+			cout<<"\nEmpleado un polinomio de grado "<<grado
+				<<"\npara x = "<<int_x2 <<" la interpolacion es  y="<<y_est2<<endl;
+			cout<<"Utilizando el intervalo:[";
+			for(auto x:l.getIntervalo()){
+				cout<<x<<" ";
+			}
+			cout<<"]"<<endl;
+			cout<<"r2 = "<<l.getError()<<endl;
+		}
+		
+	}	

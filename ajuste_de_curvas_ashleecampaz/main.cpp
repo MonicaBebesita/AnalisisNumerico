@@ -9,19 +9,24 @@ using std::vector;
 void prueba_gauss();
 int main (int argc, char *argv[]) {
 	
-	caso_1_regresion();
+	{/**caso_1_regresion();
 	cout<<"----------------------------------------------------------------------"<<endl;
 	caso_1_modelo_exponencial();
 	cout<<"----------------------------------------------------------------------"<<endl;
 	caso_1_funcion_potencia();
 	cout<<"----------------------------------------------------------------------"<<endl;
 	caso_1_regresion_cuadratica();
+	*/
+	}
+	
 	//prueba_gauss();
 	//caso_1_regresion_cuadratica();
 	//caso_1_interpolacion_newton();
 	//caso_2_interpolacion_lagrange(); 
 	//caso_3_interpolacion_lagrange();
 	//caso_1_interpolacion_inversa();
+	caso_4_interpolacion_lagrange_g2();
+	caso_4_interpolacion_lagrange_g3();
 	return 0;
 }
 
