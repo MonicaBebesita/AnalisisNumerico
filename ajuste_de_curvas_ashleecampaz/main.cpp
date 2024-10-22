@@ -8,7 +8,8 @@ using std::cin;
 using std::vector;
 void prueba_gauss();
 int main (int argc, char *argv[]) {
-	
+	trazador_cubico();
+	cout<<"----------------------------------------------------------------------"<<endl;
 	caso_1_regresion();
 	cout<<"----------------------------------------------------------------------"<<endl;
 	caso_1_modelo_exponencial();
