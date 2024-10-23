@@ -5,12 +5,15 @@
 #include "gauss.h"
 #include <cmath>
 using std::vector;
-/**
-* @file 
-* @brief contiene la a la estructura modelo_cuadratico, clase cuadratica y sus 
-	respectivas rutinas
-*/
 
+/**
+*@file
+*@brief contiene la a la estructura modelo_cuadratico, clase cuadratica y sus 
+		respectivas rutinas
+*@author MONICA ALEJANDRA CASTELLANOS MENDEZ <monicacastellanos@unicauca.edu.co>
+*@author ASHLEE VANESSA CAMPAZ VALENCIA <ashleecampaz@unicauca.edu.co>
+*@copyright MIT License
+*/
 namespace regresion{
 	struct modelo_cuadratico{
 		vector <double> x;/*!<Variable independiente*/

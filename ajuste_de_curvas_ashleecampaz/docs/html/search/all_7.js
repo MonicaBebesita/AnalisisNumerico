@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['imprimir_0',['imprimir',['../classinterpolacion_1_1newton.html#ae2a90b60b1517e6ad4106823456e14d4',1,'interpolacion::newton']]],
-  ['interpolacion_1',['interpolacion',['../namespaceinterpolacion.html',1,'']]],
-  ['interpolacion_5finversa_2eh_2',['interpolacion_inversa.h',['../interpolacion__inversa_8h.html',1,'']]],
-  ['interpolar_3',['interpolar',['../classinterpolacion_1_1newton.html#aa88407a386efc88886a70128b9bf1450',1,'interpolacion::newton::interpolar()'],['../classinterpolacion_1_1lagrange.html#a5afb2961447ba74861179235648ef6f1',1,'interpolacion::lagrange::interpolar(double x_int)'],['../classinterpolacion_1_1lagrange.html#a0983183d56170e7ac5296f5d2c7972e9',1,'interpolacion::lagrange::interpolar(double x_int, int grado)'],['../classinterpolacion_1_1int_inversa.html#a70b024bd90c7b8b7118ce87bc35bcaff',1,'interpolacion::intInversa::interpolar()']]],
-  ['intinversa_4',['intInversa',['../classinterpolacion_1_1int_inversa.html',1,'interpolacion::intInversa'],['../classinterpolacion_1_1int_inversa.html#a6f8238e122623cae599869c8e1b56244',1,'interpolacion::intInversa::intInversa()']]],
-  ['isbalanced_5',['isBalanced',['../classexpression.html#a0bc2f0d390a0124e855b39c10f6ad283',1,'expression']]],
-  ['isbinaryoperator_6',['isBinaryOperator',['../classexpression.html#abb12b02fd01f7959f7c0627732182891',1,'expression']]],
-  ['isfunction_7',['isFunction',['../classexpression.html#ae873e1b50af282aced268823e3bcf1d5',1,'expression']]],
-  ['isleftassociative_8',['isLeftAssociative',['../classexpression.html#a504ce4c29a319cc5db05565ec8f3e1c7',1,'expression']]],
-  ['isnumber_9',['isNumber',['../classexpression.html#a3c64feb2505684bcffa124f80dda0402',1,'expression']]],
-  ['isoperator_10',['isOperator',['../classexpression.html#a17e59ff1403f6768b8e4885e4b45e8c1',1,'expression']]],
-  ['isunaryoperator_11',['isUnaryOperator',['../classexpression.html#aaf694fb0e63ff4099246c915793be06d',1,'expression']]],
-  ['isvariable_12',['isVariable',['../classexpression.html#a71bad2b3c84d1d43f4abd040ceda2c87',1,'expression']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['menu_2ecpp_2',['menu.cpp',['../menu_8cpp.html',1,'']]],
+  ['menu_2eh_3',['menu.h',['../menu_8h.html',1,'']]],
+  ['menuinterpolacion_4',['menuInterpolacion',['../menu_8h.html#a9abb5f1f96173fc8a850d4283ff00af2',1,'menuInterpolacion():&#160;menu.cpp'],['../menu_8cpp.html#a9abb5f1f96173fc8a850d4283ff00af2',1,'menuInterpolacion():&#160;menu.cpp']]],
+  ['menuprincipal_5',['menuPrincipal',['../menu_8h.html#adfbaa271f44d828c6a42ce7e9affee88',1,'menuPrincipal():&#160;menu.cpp'],['../menu_8cpp.html#adfbaa271f44d828c6a42ce7e9affee88',1,'menuPrincipal():&#160;menu.cpp']]],
+  ['menuregresion_6',['menuRegresion',['../menu_8h.html#aa1a72c7a6cf7f167e3f1d40eff9da80e',1,'menuRegresion():&#160;menu.cpp'],['../menu_8cpp.html#aa1a72c7a6cf7f167e3f1d40eff9da80e',1,'menuRegresion():&#160;menu.cpp']]],
+  ['modelo_5fcuadratico_7',['modelo_cuadratico',['../structregresion_1_1modelo__cuadratico.html',1,'regresion::modelo_cuadratico'],['../structregresion_1_1modelo__cuadratico.html#a468a0eac9039f7628852c0a797124dc8',1,'regresion::modelo_cuadratico::modelo_cuadratico()']]],
+  ['modelo_5fexponencial_8',['modelo_exponencial',['../structregresion_1_1modelo__exponencial.html',1,'regresion::modelo_exponencial'],['../structregresion_1_1modelo__exponencial.html#ac2fe5c0cc76e08ccb8655c7c48e28ac6',1,'regresion::modelo_exponencial::modelo_exponencial()']]],
+  ['modelo_5flineal_9',['modelo_lineal',['../structregresion_1_1modelo__lineal.html',1,'regresion::modelo_lineal'],['../structregresion_1_1modelo__lineal.html#a1cc6183bc622081d16f9396aef415e11',1,'regresion::modelo_lineal::modelo_lineal()']]],
+  ['modelo_5fpotencia_10',['modelo_potencia',['../structregresion_1_1modelo__potencia.html',1,'regresion::modelo_potencia'],['../structregresion_1_1modelo__potencia.html#a631dc2d7ccdfde4e18df1d3aaf7a2fbf',1,'regresion::modelo_potencia::modelo_potencia()']]]
 ];

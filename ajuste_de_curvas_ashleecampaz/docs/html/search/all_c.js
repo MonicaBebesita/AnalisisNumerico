@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['precedence_0',['precedence',['../classexpression.html#a37ecd6239acd1313855863307fde343d',1,'expression']]],
-  ['prueba_5fgauss_1',['prueba_gauss',['../main_8cpp.html#ab9d8ae6f1c760d31c24b75b02c706f98',1,'main.cpp']]]
+  ['trazador_5fcubico_0',['trazador_cubico',['../caso_8h.html#adcae7b229a73dcc0c44617b3ff15bbe8',1,'trazador_cubico():&#160;caso.cpp'],['../caso_8cpp.html#adcae7b229a73dcc0c44617b3ff15bbe8',1,'trazador_cubico():&#160;caso.cpp']]]
 ];

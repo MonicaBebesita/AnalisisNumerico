@@ -1,8 +1,6 @@
 #include "gauss.h"
 
 
-
-
 vector<double> gauss(vector<vector<double>> m) {
 	int i, j, k;
 	int n = m.size();

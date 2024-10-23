@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['defaultfunctions_0',['defaultFunctions',['../classexpression.html#a9898ea92ed3266a2e9fb298e66f7a94a',1,'expression']]],
-  ['defaultvariables_1',['defaultVariables',['../classexpression.html#a7843f8ee05b31ccf0bb0b70d75c4d15d',1,'expression']]]
+  ['es_5fvalido_0',['es_valido',['../classinterpolacion_1_1newton.html#a03383e31178dbf69890fed3cc6fa985f',1,'interpolacion::newton::es_valido()'],['../classinterpolacion_1_1lagrange.html#a3525da4ca9ce39896dc92a31518d20ac',1,'interpolacion::lagrange::es_valido()']]],
+  ['estimar_1',['estimar',['../structregresion_1_1modelo__lineal.html#a5a80e0f4030b43dd7f075706d8ff9b37',1,'regresion::modelo_lineal::estimar()'],['../classregresion_1_1lineal__simple.html#a65947056105b2c68c505f28b41896069',1,'regresion::lineal_simple::estimar()'],['../structregresion_1_1modelo__potencia.html#ab9e582d3bb5126f9ae013100bb311112',1,'regresion::modelo_potencia::estimar()'],['../structregresion_1_1modelo__exponencial.html#aac7d226ed0e79bb3dff8c1760052a4fd',1,'regresion::modelo_exponencial::estimar()'],['../classregresion_1_1lineal__potencia.html#ac3e0c6772483b31c1336ebfbed8d1a2a',1,'regresion::lineal_potencia::estimar()'],['../classregresion_1_1lineal__exponencial.html#a109834e8efbd5892aa72f31e59d27f70',1,'regresion::lineal_exponencial::estimar()'],['../structregresion_1_1modelo__cuadratico.html#aeb1c3efe5d13b49067aa8756c3791bce',1,'regresion::modelo_cuadratico::estimar()'],['../classregresion_1_1cuadratica.html#a12cb0b3b9689b1cde7383581ef9bfc8d',1,'regresion::cuadratica::estimar()']]]
 ];

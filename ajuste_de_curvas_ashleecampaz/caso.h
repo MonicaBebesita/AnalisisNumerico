@@ -2,9 +2,13 @@
 #define CASO_H
 
 /**
-* @file 
-* @brief contiene la definicion de las rutinas de los casos
+*@file
+*@brief contiene la definicion de las rutinas de los casos
+*@author MONICA ALEJANDRA CASTELLANOS MENDEZ <monicacastellanos@unicauca.edu.co>
+*@author ASHLEE VANESSA CAMPAZ VALENCIA <ashleecampaz@unicauca.edu.co>
+*@copyright MIT License
 */
+
 void caso_1_regresion();
 
 void caso_1_funcion_potencia();
@@ -12,16 +16,6 @@ void caso_1_funcion_potencia();
 void caso_1_modelo_exponencial();
 
 void caso_1_regresion_cuadratica(); 
-
-void caso_1_interpolacion_newton();
-
-void caso_1_interpolacion_lagrange();
-
-void caso_2_interpolacion_lagrange();
-
-void caso_3_interpolacion_lagrange();
-
-void caso_1_interpolacion_inversa();
 
 void caso_4_interpolacion_lagrange_g2();
 

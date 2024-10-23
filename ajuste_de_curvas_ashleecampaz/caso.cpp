@@ -5,7 +5,6 @@
 #include "regresion_cuadratica.h"
 #include "newthon.h"
 #include "lagrange.h"
-#include "interpolacion_inversa.h"
 #include "spline3.h"
 
 using std::cout;
@@ -13,7 +12,6 @@ using std::endl;
 using std::vector;
 using interpolacion::newton; 
 using interpolacion::lagrange; 
-using interpolacion::intInversa;
 using regresion::lineal_simple;
 using regresion::lineal_potencia;
 using regresion::lineal_exponencial;
@@ -108,117 +106,7 @@ void caso_1_regresion(){
 			<<" es y="<<y_estimado<<endl;
 	}
 	
-	void caso_1_interpolacion_newton(){
-		cout<<"Caso 1 interpolacion de Newton"<<endl;
-		vector<double>  x = {100.0f,200.0f,300.0f,400.0f,500.0f};
-		vector<double> y = {-160.0f,-35.0f,-4.2f,9.0f,16.9f};
-		
-		newton n(x,y);
-		
-		double int_x = 140.0f;
-		double y_est;
-		
-		if(!n.es_valido()){
-			cout<<"El polinomio no es valido."<<endl;
-		}
-		else{
-			y_est = n.interpolar(int_x);
-			n.imprimir(cout);
-			cout<<"\nPara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl; 
-		}
-	}
-	
-	void caso_1_interpolacion_lagrange(){
-		cout<<"Caso 1 interpolacion de lagrange"<<endl;
-		vector<double>  x = {100.0f,200.0f,300.0f,400.0f,500.0f};
-		vector<double> y = {-160.0f,-35.0f,-4.2f,9.0f,16.9f};
-		
-		lagrange l(x,y);
-		
-		double int_x = 140.0f;
-		double y_est;
-		
-		if(!l.es_valido()){
-			cout<<"El polinomio no es valido."<<endl;
-		}
-		else{
-			y_est = l.interpolar(int_x);
-			cout<<"\nPara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl; 
-		}
-		
-	}	
-	void caso_2_interpolacion_lagrange(){
-		cout<<"Caso 2 interpolacion de lagrange"<<endl;
-		vector<double>  x = {2.0f,2.2f,2.4f,2.6f,2.8f};
-		vector<double> y = {0.5103757f,0.5207843f,0.5104147f,0.4813306f,0.4359160f};
-		
-		lagrange l(x,y);
-		
-		double int_x = 2.5f;
-		double y_est;
-		
-		if(!l.es_valido()){
-			cout<<"El polinomio no es valido."<<endl;
-		}
-		else{
-			y_est = l.interpolar(int_x);
-			cout<<"\nPara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl; 
-		}
-		
-	}
-	void caso_3_interpolacion_lagrange(){
-		cout<<"\nCaso 3 interpolacion de lagrange con grado\n"<<endl;
-		vector<double>  x = {2.0f,2.2f,2.4f,2.6f,2.8f};
-		vector<double> y = {0.5103757f,0.5207843f,0.5104147f,0.4813306f,0.4359160f};
-		
-		lagrange l(x,y);
-		
-		double int_x = 2.5f;
-		int grado = 2; 
-		double y_est;
-		
-		if(!l.es_valido()){
-			cout<<"El polinomio no es valido."<<endl;
-		}
-		else{
-			y_est = l.interpolar(int_x,grado);
-			cout<<"Empleado un polinomio de grado "<<grado
-			<<"\npara x = "<<int_x <<" la interpolacion es  y="<<y_est<<endl;
-			cout<<"Utilizando el intervalo:[";
-			for(auto x:l.getIntervalo()){
-				cout<<x<<" ";
-			}
-			cout<<"]"<<endl;
-			cout<<"r2 = "<<l.getError()<<endl;
-		}
-		
-	}
-	void caso_1_interpolacion_inversa(){
-		cout<<"\nCaso  interpolacion inversa\n"<<endl;
-		vector<double>  x = {1.0f,2.0f,3.0f,4.0f,5.0f,6.0f,7.0f};
-		vector<double> y = {1.0f,0.5f,0.3333f,0.25f,0.2f,0.1667f,0.1429f};
-		
-		intInversa intv(x,y);
-		
-		double int_y = 0.3f;
-		int grado = 2; 
-		double x_est;
-		
-		if(!intv.es_valido()){
-			cout<<"El polinomio no es valido."<<endl;
-		}
-		else{
-			x_est = intv.interpolar(int_y);
-			cout<<"Empleado un polinomio de grado "<<grado
-				<<"\npara y = "<<int_y <<" la interpolacion es  x="<<x_est<<endl;
-			cout<<"Utilizando el intervalo:[";
-			for(auto x:intv.getIntervalo()){
-				cout<<x<<" ";
-			}
-			cout<<"]"<<endl;
-			cout<< intv.getPolinomio()<<endl;
-		}
-	}
+
 		
 	void caso_4_interpolacion_lagrange_g2(){
 		cout<<"\nInterpolacion de lagrange con grado 2\n"<<endl;

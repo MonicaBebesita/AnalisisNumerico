@@ -7,8 +7,11 @@
 using std::vector; 
 
 /**
-* @file 
-* @brief contiene la clase newton y sus rutinas
+*@file
+*@brief contiene la clase newton y sus rutinas
+*@author MONICA ALEJANDRA CASTELLANOS MENDEZ <monicacastellanos@unicauca.edu.co>
+*@author ASHLEE VANESSA CAMPAZ VALENCIA <ashleecampaz@unicauca.edu.co>
+*@copyright MIT License
 */
 namespace interpolacion{
 	

@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['gauss_0',['gauss',['../gauss_8h.html#a43a37b9bba1257b0a6920c4bc2b012c4',1,'gauss(vector&lt; vector&lt; double &gt; &gt; m):&#160;guass.cpp'],['../guass_8cpp.html#a43a37b9bba1257b0a6920c4bc2b012c4',1,'gauss(vector&lt; vector&lt; double &gt; &gt; m):&#160;guass.cpp']]],
-  ['gauss_2eh_1',['gauss.h',['../gauss_8h.html',1,'']]],
-  ['geterror_2',['getError',['../classinterpolacion_1_1lagrange.html#af6d657ef1544017d1f39b3dcde7895bd',1,'interpolacion::lagrange']]],
-  ['getintervalo_3',['getIntervalo',['../classinterpolacion_1_1lagrange.html#aa092cbf6dadb3821801295e3e95ab71d',1,'interpolacion::lagrange::getIntervalo()'],['../classinterpolacion_1_1int_inversa.html#afb6c505fd5e0f3dbccb18fa5ea935ef8',1,'interpolacion::intInversa::getIntervalo()']]],
-  ['getnumber_4',['getNumber',['../classexpression.html#a50e34488a4ba7104d82a64f1104d0fc2',1,'expression']]],
-  ['getpolinomio_5',['getPolinomio',['../classinterpolacion_1_1int_inversa.html#a5aa4180af20833d1e1e51f16b7d20a01',1,'interpolacion::intInversa']]],
-  ['getrpn_6',['getRPN',['../classexpression.html#a224d2d91dcdfc1ea2a695cc73ae44c42',1,'expression']]],
-  ['gettokens_7',['getTokens',['../classexpression.html#aa5484a7aaa5a137fda11bf6bad2c7bd7',1,'expression']]],
-  ['guass_2ecpp_8',['guass.cpp',['../guass_8cpp.html',1,'']]]
+  ['lagrange_0',['lagrange',['../classinterpolacion_1_1lagrange.html',1,'interpolacion::lagrange'],['../classinterpolacion_1_1lagrange.html#a55f2fdd5ee6f3ecf4704d21243b97f69',1,'interpolacion::lagrange::lagrange()']]],
+  ['lagrange_2eh_1',['lagrange.h',['../lagrange_8h.html',1,'']]],
+  ['lineal_2',['lineal',['../structregresion_1_1modelo__potencia.html#aee77d58f8eb003cd0947d5d53929b416',1,'regresion::modelo_potencia::lineal'],['../structregresion_1_1modelo__exponencial.html#a4b9d9007b8ba2df2238b2aa5f8652115',1,'regresion::modelo_exponencial::lineal']]],
+  ['lineal_5fexponencial_3',['lineal_exponencial',['../classregresion_1_1lineal__exponencial.html',1,'regresion::lineal_exponencial'],['../classregresion_1_1lineal__exponencial.html#a59cc99466d0364a3b93e406b61df20ed',1,'regresion::lineal_exponencial::lineal_exponencial()']]],
+  ['lineal_5fpotencia_4',['lineal_potencia',['../classregresion_1_1lineal__potencia.html',1,'regresion::lineal_potencia'],['../classregresion_1_1lineal__potencia.html#a8b9ae4730317d5cc2a67d33f5a5e1842',1,'regresion::lineal_potencia::lineal_potencia()']]],
+  ['lineal_5fsimple_5',['lineal_simple',['../classregresion_1_1lineal__simple.html',1,'regresion::lineal_simple'],['../classregresion_1_1lineal__simple.html#a4aa58066dca61eebfb0fc65ece5d3cd0',1,'regresion::lineal_simple::lineal_simple()']]],
+  ['ln_6',['ln',['../namespaceregresion.html#a5e7b987cc8f7fba60364761071fdfbe6',1,'regresion']]],
+  ['logd_7',['logD',['../namespaceregresion.html#ada4016529879af3cd515a875818c71d3',1,'regresion']]]
 ];

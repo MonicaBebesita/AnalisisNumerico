@@ -10,8 +10,11 @@ using std::cin;
 using std::vector;
 
 /**
-* @file 
-* @brief contiene a la estructura modelo_lineal, la clase lineal_simple y sus respectivas rutinas
+*@file
+*@brief contiene a la estructura modelo_lineal, la clase lineal_simple y sus respectivas rutinas
+*@author MONICA ALEJANDRA CASTELLANOS MENDEZ <monicacastellanos@unicauca.edu.co>
+*@author ASHLEE VANESSA CAMPAZ VALENCIA <ashleecampaz@unicauca.edu.co>
+*@copyright MIT License
 */
 namespace regresion{
 	

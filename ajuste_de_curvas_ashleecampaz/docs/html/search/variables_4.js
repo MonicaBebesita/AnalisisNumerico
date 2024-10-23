@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lineal_0',['lineal',['../structregresion_1_1modelo__potencia.html#aee77d58f8eb003cd0947d5d53929b416',1,'regresion::modelo_potencia::lineal'],['../structregresion_1_1modelo__exponencial.html#a4b9d9007b8ba2df2238b2aa5f8652115',1,'regresion::modelo_exponencial::lineal']]]
+  ['r2_0',['r2',['../structregresion_1_1modelo__lineal.html#a60a85eb6e9d0d3ff4151bc2bf9ccf109',1,'regresion::modelo_lineal::r2'],['../structregresion_1_1modelo__cuadratico.html#abc015661fd03723c0138cdc4ec68e7e4',1,'regresion::modelo_cuadratico::r2']]]
 ];

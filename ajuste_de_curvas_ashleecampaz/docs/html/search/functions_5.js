@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['lagrange_0',['lagrange',['../classinterpolacion_1_1lagrange.html#a55f2fdd5ee6f3ecf4704d21243b97f69',1,'interpolacion::lagrange']]],
-  ['lineal_5fexponencial_1',['lineal_exponencial',['../classregresion_1_1lineal__exponencial.html#a59cc99466d0364a3b93e406b61df20ed',1,'regresion::lineal_exponencial']]],
-  ['lineal_5fpotencia_2',['lineal_potencia',['../classregresion_1_1lineal__potencia.html#a8b9ae4730317d5cc2a67d33f5a5e1842',1,'regresion::lineal_potencia']]],
-  ['lineal_5fsimple_3',['lineal_simple',['../classregresion_1_1lineal__simple.html#a4aa58066dca61eebfb0fc65ece5d3cd0',1,'regresion::lineal_simple']]],
-  ['ln_4',['ln',['../namespaceregresion.html#a5e7b987cc8f7fba60364761071fdfbe6',1,'regresion']]],
-  ['logd_5',['logD',['../namespaceregresion.html#ada4016529879af3cd515a875818c71d3',1,'regresion']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['menuinterpolacion_1',['menuInterpolacion',['../menu_8h.html#a9abb5f1f96173fc8a850d4283ff00af2',1,'menuInterpolacion():&#160;menu.cpp'],['../menu_8cpp.html#a9abb5f1f96173fc8a850d4283ff00af2',1,'menuInterpolacion():&#160;menu.cpp']]],
+  ['menuprincipal_2',['menuPrincipal',['../menu_8h.html#adfbaa271f44d828c6a42ce7e9affee88',1,'menuPrincipal():&#160;menu.cpp'],['../menu_8cpp.html#adfbaa271f44d828c6a42ce7e9affee88',1,'menuPrincipal():&#160;menu.cpp']]],
+  ['menuregresion_3',['menuRegresion',['../menu_8h.html#aa1a72c7a6cf7f167e3f1d40eff9da80e',1,'menuRegresion():&#160;menu.cpp'],['../menu_8cpp.html#aa1a72c7a6cf7f167e3f1d40eff9da80e',1,'menuRegresion():&#160;menu.cpp']]],
+  ['modelo_5fcuadratico_4',['modelo_cuadratico',['../structregresion_1_1modelo__cuadratico.html#a468a0eac9039f7628852c0a797124dc8',1,'regresion::modelo_cuadratico']]],
+  ['modelo_5fexponencial_5',['modelo_exponencial',['../structregresion_1_1modelo__exponencial.html#ac2fe5c0cc76e08ccb8655c7c48e28ac6',1,'regresion::modelo_exponencial']]],
+  ['modelo_5flineal_6',['modelo_lineal',['../structregresion_1_1modelo__lineal.html#a1cc6183bc622081d16f9396aef415e11',1,'regresion::modelo_lineal']]],
+  ['modelo_5fpotencia_7',['modelo_potencia',['../structregresion_1_1modelo__potencia.html#a631dc2d7ccdfde4e18df1d3aaf7a2fbf',1,'regresion::modelo_potencia']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_custom_function.html#a2971809e90601e6b86d143fce1f656a5',1,'CustomFunction::name'],['../struct_variable.html#a20d3268aae34f6b98d7dbdecb65b17ed',1,'Variable::name']]],
-  ['newthon_2eh_1',['newthon.h',['../newthon_8h.html',1,'']]],
-  ['newton_2',['newton',['../classinterpolacion_1_1newton.html',1,'interpolacion::newton'],['../classinterpolacion_1_1newton.html#ad5f55b80519ab29104e16e42f49c114c',1,'interpolacion::newton::newton()']]],
-  ['numbertostring_3',['numberToString',['../classexpression.html#a0923ac33a5caa0a8c9c3647f29dd0680',1,'expression']]]
+  ['r2_0',['r2',['../structregresion_1_1modelo__lineal.html#a60a85eb6e9d0d3ff4151bc2bf9ccf109',1,'regresion::modelo_lineal::r2'],['../structregresion_1_1modelo__cuadratico.html#abc015661fd03723c0138cdc4ec68e7e4',1,'regresion::modelo_cuadratico::r2']]],
+  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['regresion_2',['regresion',['../namespaceregresion.html',1,'']]],
+  ['regresion_2eh_3',['regresion.h',['../regresion_8h.html',1,'']]],
+  ['regresion_5fcuadratica_2eh_4',['regresion_cuadratica.h',['../regresion__cuadratica_8h.html',1,'']]]
 ];

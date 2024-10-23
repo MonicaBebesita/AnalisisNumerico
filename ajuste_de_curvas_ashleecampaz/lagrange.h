@@ -1,9 +1,13 @@
 #ifndef LAGRANGE_H
 #define LAGRANGE_H
 
+
 /**
-* @file 
-* @brief contiene la clase lagrange y sus rutinas
+*@file
+*@brief contiene la clase lagrange y sus rutinas
+*@author MONICA ALEJANDRA CASTELLANOS MENDEZ <monicacastellanos@unicauca.edu.co>
+*@author ASHLEE VANESSA CAMPAZ VALENCIA <ashleecampaz@unicauca.edu.co>
+*@copyright MIT License
 */
 namespace interpolacion{
 	
@@ -24,6 +28,8 @@ namespace interpolacion{
 			this->y = y; 
 			
 		}
+		
+		
 		
 		bool es_valido(){
 			return valido; 
@@ -124,14 +130,14 @@ namespace interpolacion{
 				}
 				
 				//toma los datos por debajo de int_x
-				while (i<= indice_lim_inf){
+				while (i<= indice_lim_inf && contador<intervalo_x.size()){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
 					contador++; 
 				}
 				//toma los datos por encima de int_x
-				while (i<=j && i<x.size()){
+				while (i<=j && i<x.size() && contador<intervalo_x.size()){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
@@ -152,7 +158,7 @@ namespace interpolacion{
 				}else{
 					i =0;
 				}
-				while (i<= indice_lim_inf){
+				while (i<= indice_lim_inf && contador<intervalo_x.size()){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
@@ -166,7 +172,7 @@ namespace interpolacion{
 					j = indice_lim_sup + num_datos  - numeros_debajo_lim_inf -1; 
 				}
 				i=indice_lim_sup;
-				while (i<=j && i<x.size()){
+				while (i<=j && i<x.size() && contador<intervalo_x.size()){
 					intervalo_x[contador]=x[i];
 					intervalo_y[contador]=y[i]; 
 					i++;
@@ -310,7 +316,7 @@ namespace interpolacion{
 		vector<double> y;/*!<Datos de la varible dependiente*/
 		vector<double> intervalo_x; /*!<Datos de la varible independiente para un polinomio de grado dado*/
 		vector<double> intervalo_y;/*!<Datos de la varible dependiente para un polinomio de grado dado*/
-		double r2;/*!<Error absoluto de una estimacion con grado dado*/ 
+		double r2 =0;/*!<Error absoluto de una estimacion con grado dado*/ 
 		bool valido = false;/*!<Define si el modelo es valido*/ 
 	};
 	

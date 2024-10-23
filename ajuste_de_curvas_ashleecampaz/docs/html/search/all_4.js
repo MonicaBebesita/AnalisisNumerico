@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['encontrar_0',['encontrar',['../classraices_1_1mm.html#ae9be0e053bfb5c546325418ab76b3b9d',1,'raices::mm']]],
-  ['error_5frelativo_1',['error_relativo',['../namespaceraices.html#a7fc9d7f16e56fe96e295fe364cfd3b9b',1,'raices']]],
-  ['es_5fcero_2',['es_cero',['../namespaceraices.html#a8ed32ee79445698977c7a0099cfb1724',1,'raices']]],
-  ['es_5fvalido_3',['es_valido',['../classinterpolacion_1_1newton.html#a03383e31178dbf69890fed3cc6fa985f',1,'interpolacion::newton::es_valido()'],['../classinterpolacion_1_1lagrange.html#a3525da4ca9ce39896dc92a31518d20ac',1,'interpolacion::lagrange::es_valido()'],['../classinterpolacion_1_1int_inversa.html#a2fd2d71cef6cacc885cebd0904e22cce',1,'interpolacion::intInversa::es_valido()']]],
-  ['estimar_4',['estimar',['../structregresion_1_1modelo__lineal.html#a5a80e0f4030b43dd7f075706d8ff9b37',1,'regresion::modelo_lineal::estimar()'],['../classregresion_1_1lineal__simple.html#a65947056105b2c68c505f28b41896069',1,'regresion::lineal_simple::estimar()'],['../structregresion_1_1modelo__potencia.html#ab9e582d3bb5126f9ae013100bb311112',1,'regresion::modelo_potencia::estimar()'],['../structregresion_1_1modelo__exponencial.html#aac7d226ed0e79bb3dff8c1760052a4fd',1,'regresion::modelo_exponencial::estimar()'],['../classregresion_1_1lineal__potencia.html#ac3e0c6772483b31c1336ebfbed8d1a2a',1,'regresion::lineal_potencia::estimar()'],['../classregresion_1_1lineal__exponencial.html#a109834e8efbd5892aa72f31e59d27f70',1,'regresion::lineal_exponencial::estimar()'],['../structregresion_1_1modelo__cuadratico.html#aeb1c3efe5d13b49067aa8756c3791bce',1,'regresion::modelo_cuadratico::estimar()'],['../classregresion_1_1cuadratica.html#a12cb0b3b9689b1cde7383581ef9bfc8d',1,'regresion::cuadratica::estimar()']]],
-  ['eval_5',['eval',['../classexpression.html#a3f0461aaec725857226e7fd252832ced',1,'expression::eval()'],['../classexpression.html#a41a2d076a7cb55c17879664be1054bab',1,'expression::eval(double val)'],['../classexpression.html#af57f0dd4db3e8e859e94a393fc816a11',1,'expression::eval(vector&lt; Variable &gt; vars)']]],
-  ['evalrpn_6',['evalRPN',['../classexpression.html#a97a21d28419c4be33a4f9697c4e7d0f0',1,'expression']]],
-  ['expresion_2eh_7',['expresion.h',['../expresion_8h.html',1,'']]],
-  ['expression_8',['expression',['../classexpression.html',1,'expression'],['../classexpression.html#a8bd09e65464bf7872cb3efc65b4ece8d',1,'expression::expression(string exprText)'],['../classexpression.html#afcd45f7fbd85c5206dcbdd426a19f4b0',1,'expression::expression(string exprText, vector&lt; CustomFunction &gt; funcs)']]]
+  ['gauss_0',['gauss',['../gauss_8h.html#a43a37b9bba1257b0a6920c4bc2b012c4',1,'gauss(vector&lt; vector&lt; double &gt; &gt; m):&#160;guass.cpp'],['../guass_8cpp.html#a43a37b9bba1257b0a6920c4bc2b012c4',1,'gauss(vector&lt; vector&lt; double &gt; &gt; m):&#160;guass.cpp']]],
+  ['gauss_2eh_1',['gauss.h',['../gauss_8h.html',1,'']]],
+  ['geterror_2',['getError',['../classinterpolacion_1_1lagrange.html#af6d657ef1544017d1f39b3dcde7895bd',1,'interpolacion::lagrange']]],
+  ['getintervalo_3',['getIntervalo',['../classinterpolacion_1_1lagrange.html#aa092cbf6dadb3821801295e3e95ab71d',1,'interpolacion::lagrange']]],
+  ['guass_2ecpp_4',['guass.cpp',['../guass_8cpp.html',1,'']]]
 ];
