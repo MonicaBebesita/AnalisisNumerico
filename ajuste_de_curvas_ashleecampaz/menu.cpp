@@ -56,7 +56,7 @@ void menuPrincipal(){
 void menuRegresion(){
 	int opcion = -1; 
 	do{
-		cout<<"--Menu regresion--\n1.Modelo lineal\n2.Modelo de potencia\n3.Modelo exponencial\n4.Modelo cuadratico\n5.volver a tras "<<endl; 
+		cout<<"--Menu regresion--\n1.Modelo lineal\n2.Modelo de potencia\n3.Modelo exponencial\n4.Modelo cuadratico\n5.volver atras "<<endl; 
 		cout<<"ingrese un opcion: "<<endl; 
 		scanf("%i",&opcion); 
 		switch(opcion){

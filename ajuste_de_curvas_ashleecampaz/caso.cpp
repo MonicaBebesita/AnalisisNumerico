@@ -186,21 +186,21 @@ void caso_1_regresion(){
 		}
 		
 	}	
-	void trazador_cubico(){
-		cout << "Trazador Cubico" << endl;
-		vector<double> x = {6.00, 6.25, 6.50, 6.75};
-		vector<double> y = {114.5160168, 19.0198411, -141.2134580, -382.4545422
-		};
-		spline3 sp(x,y);
-		double x_int =  6.3125;
-		double y_int;
-		
-		if(!sp.es_valido()){
-			cout << "No es valido" << endl;
-			return;
-		}else{
-			y_int = sp.interpolar(x_int);
-			cout<<"\nPara x = "<<x_int<<" la interpolacion es y="<<y_int<<endl;
-			sp.imprimir_error(0.775847881,y_int);
+		void trazador_cubico(){
+			cout << "Trazador Cubico" << endl;
+			vector<double> x = {6.00, 6.25, 6.50, 6.75};
+			vector<double> y = {114.5160168, 19.0198411, -141.2134580, -382.4545422
+			};
+			spline3 sp(x,y);
+			double x_int =  6.3125;
+			double y_int;
+			
+			if(!sp.es_valido()){
+				cout << "No es valido" << endl;
+				return;
+			}else{
+				y_int = sp.interpolar(x_int);
+				cout<<"\nPara x = "<<x_int<<" la interpolacion es y="<<y_int<<endl;
+				sp.imprimir_error(-14.3199132432178,y_int);
+			}
 		}
-	}

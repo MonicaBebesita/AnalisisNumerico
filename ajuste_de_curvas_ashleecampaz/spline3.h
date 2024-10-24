@@ -1,3 +1,11 @@
+/**
+* @file spline3.h
+* @brief Clase para realizar interpolación cúbica por tramos utilizando splines cúbicos.
+* 
+* Esta clase proporciona una implementación de splines cúbicos para la interpolación
+* de puntos en un conjunto de datos.
+*/
+
 #ifndef SPLINE3_H
 #define SPLINE3_H
 
@@ -11,44 +19,65 @@ using std::cin;
 using std::endl;
 
 /**
-* @file 
-* @brief contiene la clase spline3 y sus rutinas
+* @namespace interpolacion
+* @brief Espacio de nombres que contiene las funciones y clases para la interpolación.
 */
 namespace interpolacion {
+	
+	/**
+	* @class spline3
+	* @brief Clase para realizar interpolación cúbica por tramos.
+	* 
+	* La clase utiliza splines cúbicos para interpolar valores de datos discretos.
+	*/
 	class spline3 {
 	public:
 		/**
-		* @brief crea una nueva instancia de interpolador por splines cubicos
+		* @brief Constructor que inicializa los puntos de interpolación.
+		* @param x Vector de valores de la variable independiente.
+		* @param y Vector de valores de la variable dependiente.
 		*/
 		spline3(vector<double> x, vector<double> y) : x(x), y(y) {
 			construir();
 		}
 		
+		/**
+		* @brief Verifica si la construcción del spline fue exitosa.
+		* @return true si el spline es válido, false en caso contrario.
+		*/
 		bool es_valido() {
 			return valido;
 		}
 		
 		/**
-		* @brief Evalua el spline del intervalo en el que se encuentra x_int
-		* @param x_int valor a interpolar
-		* @return valor de spline en x_int
+		* @brief Interpola un valor dado utilizando el spline cúbico.
+		* @param x_int El valor de la variable independiente a interpolar.
+		* @return El valor interpolado, o NAN si el spline no es válido o el valor está fuera de rango.
 		*/
 		double interpolar(double x_int) {
 			int i;
 			for (i = 0; i < (int)x.size() && x_int > x[i]; i++);
+			
+			// Imprimir los límites generales del intervalo
+			cout << "Intervalo general: [" << x.front() << ", " << x.back() << "]" << endl;
+			
 			cout << "Intervalo en el que se encuentra el dato " << x_int << " : " << i << endl;
 			
 			// Usando los nodos intermedios
 			if (i == 0 || i == (int)x.size()) {
 				return NAN;
 			}
+			
+			// Imprimir el polinomio para el intervalo específico
+			imprimir_polinomios();
+			
 			return evaluar(i - 1, x_int);
 		}
 		
 		/**
-		* @brief Imprimir el error relativo y el error relativo porcentual
-		* @param valor_real valor real del dato
-		* @param valor_interpolado valor interpolado obtenido
+		* @brief Imprime el error relativo y porcentual entre el valor real y el valor interpolado.
+		* @param valor_real El valor real del dato.
+		* @param valor_interpolado El valor interpolado calculado.
 		*/
 		void imprimir_error(double valor_real, double valor_interpolado) {
 			if (valor_real == 0) {
@@ -56,7 +85,8 @@ namespace interpolacion {
 				return;
 			}
 			
-			double error_relativo = fabs((valor_real - valor_interpolado) / valor_real);
+			// Calculamos el error absoluto y relativo correctamente
+			double error_relativo = fabs((valor_real - valor_interpolado) / fabs(valor_real));
 			double error_relativo_porcentual = error_relativo * 100;
 			
 			cout << "Error Relativo: " << error_relativo << endl;
@@ -64,11 +94,14 @@ namespace interpolacion {
 		}
 		
 	private:
-			vector<double> x; // Var independiente
-			vector<double> y; // Var dependiente
-			vector<double> f2; // Segundas derivadas
-			bool valido = false; // Verifica si el interpolador es valido
+			vector<double> x; ///< Valores de la variable independiente.
+			vector<double> y; ///< Valores de la variable dependiente.
+			vector<double> f2; ///< Valores de las segundas derivadas.
+			bool valido = false; ///< Indica si el spline es válido.
 			
+			/**
+			* @brief Construye el spline cúbico calculando las segundas derivadas en los nodos.
+			*/
 			void construir() {
 				int n = (int)x.size();
 				if (x.size() != y.size() || n < 3) {
@@ -76,7 +109,6 @@ namespace interpolacion {
 					cout << "Interpolación inválida" << endl;
 					return;
 				}
-				//cosas que no entendí(alpha) pero funciona
 				vector<double> h(n - 1), alpha(n - 1);
 				for (int i = 0; i < n - 1; i++) {
 					h[i] = x[i + 1] - x[i];
@@ -108,10 +140,10 @@ namespace interpolacion {
 			}
 			
 			/**
-			* @brief Evaluar el spline del intervalo i para x_int
-			* @param i intervalo
-			* @param x_int valor a interpolar
-			* @return valor interpolado
+			* @brief Evalúa el spline en un intervalo específico.
+			* @param i Índice del intervalo.
+			* @param x_int Valor de la variable independiente a interpolar.
+			* @return El valor interpolado en el intervalo.
 			*/
 			double evaluar(int i, double x_int) {
 				if (!valido) {
@@ -125,7 +157,26 @@ namespace interpolacion {
 				double dx = x_int - x[i];
 				return A * dx * dx * dx + B * dx * dx + C * dx + D;
 			}
+			
+			/**
+			* @brief Imprime los polinomios cúbicos correspondientes a cada intervalo.
+			*/
+			void imprimir_polinomios() {
+				for (int i = 0; i < (int)x.size() - 1; i++) {
+					double h = x[i + 1] - x[i];
+					double A = (f2[i + 1] - f2[i]) / (6.0 * h);
+					double B = f2[i] / 2.0;
+					double C = (y[i + 1] - y[i]) / h - (f2[i + 1] + 2.0 * f2[i]) * h / 6.0;
+					double D = y[i];
+					
+					cout << "Polinomio correspondiente en el intervalo [" << x[i] << ", " << x[i + 1] << "]:\n";
+					cout << "S(x) = " << A << "(x - " << x[i] << ")^3 + " 
+						<< B << "(x - " << x[i] << ")^2 + " 
+						<< C << "(x - " << x[i] << ") + " 
+						<< D << endl;
+				}
+			}
 	};
 }
 
-#endif
+#endif // SPLINE3_H
