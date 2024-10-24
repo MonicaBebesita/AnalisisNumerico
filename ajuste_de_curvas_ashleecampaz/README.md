@@ -1,5 +1,5 @@
 **PROYECTO DE SEGUNDO CORTE EJERCICIO G-06.**
-
+**NOTA IMPORTANTE:** RECUERDE AGREGAR TODAS LAS FUENTES Y CABECERAS ANTES DE EMPEZAR
 Este proyecto posee la implementacion de diferentes estrategias para el ajuste de curvas, entre estas esta la regresion y la interpolacion. 
 
 Primera parte: Regresion.
